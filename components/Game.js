@@ -1,5 +1,5 @@
 import Wallet from "./Wallet.js";
-import Statistics from "./Statistics";
+import Statistics from "./Statistics.js";
 import Draw from "./Draw.js";
 import Result from "./Result.js";
 class Game {
@@ -27,7 +27,6 @@ class Game {
     wonBid = 0,
     bid = 0
   ) {
-    console.log("grmy");
     this.boards.forEach((board, i) => {
       board.style.backgroundColor = colors[i];
     });
@@ -47,7 +46,6 @@ class Game {
   startGame() {
     if (this.inputBid.value < 1) return alert("Too small amount");
     const bid = Math.floor(this.inputBid.value);
-    // if (this.inputBid.value < 1) return alert('Too small amount');
     if (!this.wallet.checkCanPlay(bid)) {
       return alert("You do not have enough funds");
     }

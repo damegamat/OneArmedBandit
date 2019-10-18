@@ -7,7 +7,6 @@ class Statistics {
       win,
       bid
     };
-    console.log(gameResult);
     this.gameResults.push(gameResult);
   }
   showGameStatistics() {
